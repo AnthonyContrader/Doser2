@@ -1,28 +1,38 @@
+<body>
+
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-7">
-      <img src="../../assets/Weser_Logo-27.svg" alt="logo">
-    </div>
-    <div class="col-md-5">
-      <form #f="ngForm">
-        <p>Please insert username and password to Login or Sign in</p>
-        <div class="form-group">
-          <input class="form-control" type="text" id="user" name="username" placeholder="Username" ngModel>
+    <div class="row">
+
+        <div class="col-md-7">
+            <img src="../../assets/doserlogin.png" alt="logo">
         </div>
-        <div class="form-group">
-          <input class="form-control" type="password" id="pass" name="password" placeholder="Password" ngModel>
+        <div class="col-md-1">
+
         </div>
-        <table>
-          <tr>
-            <th>
-              <button type="submit"  (click)="login(f)">Login</button>
-            </th>
-            <th>
-               <button type="submit" (click)="register()">Sign in</button>
-            </th>
-          </tr>
-        </table>
-      </form>
+
+        <div class="col-md-3">
+
+		    <form #f="ngForm">
+                <p>Please insert username and password to Login or Sign Up</p>
+                <div class="form-group">
+				    <input class="form-control" type="text" id="user" name="username" placeholder="Username" ngModel>
+                </div>
+
+                <div class="form-group">
+				    <input class="form-control" type="password" id="pass" name="password" placeholder="Password" ngModel>
+                </div>
+                <button type="submit" class="login" (click)="login(f)">Login</button>
+                <button type="submit" class="login" (click)="login(f)">Sign Up</button>
+                 <img class="img2" src="../../assets/doserlogin2.png" alt="logo">
+
+            </form>
+        </div>  
+
+        <div class="col-md-1">
+
+        </div> 
+
     </div>
-  </div>
 </div>
+</body>
+

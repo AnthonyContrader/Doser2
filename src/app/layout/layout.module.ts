@@ -1,30 +1,37 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
-import { AdminMenuComponent } from './admin-layout/admin-menu/admin-menu.component';
-import { TutorLayoutComponent } from './tutor-layout/tutor-layout.component';
-import { TutorMenuComponent } from './tutor-layout/tutor-menu/tutor-menu.component';
-import { DoctorLayoutComponent } from './doctor-layout/doctor-layout.component';
-import { DoctorMenuComponent } from './doctor-layout/doctor-menu/doctor-menu.component';
-import { DeviceLayoutComponent } from './device-layout/device-layout.component';
-import { DeviceMenuComponent } from './device-layout/device-menu/device-menu.component';
+import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { MenuComponent } from './menu/menu.component';
+import { ApartmentDropdownComponent } from './menu/apartment-dropdown/apartment-dropdown.component';
+import { RoomDropdownComponent } from './menu/apartment-dropdown/room-dropdown/room-dropdown.component';
+import { ThingDropdownComponent } from './menu/thing-dropdown/thing-dropdown.component';
+import { ItemDropdownComponent } from './menu/item-dropdown/item-dropdown.component';
 
-/**
- * Modulo di layout. Viene caricato nel rputer outlet padre e poi 
- * non viene più ricaricato. Quando clicchiamo su un link ricarichiamo solo l'outlet
- * che sta dentro AdminLayoutComponent
- * 
- * @author Vittorio Valent
- * 
- * @see AdminLayoutComponent
- */
+
 @NgModule({
-  declarations: [AdminLayoutComponent, AdminMenuComponent, TutorLayoutComponent, TutorMenuComponent, DoctorLayoutComponent, DoctorMenuComponent, DeviceLayoutComponent, DeviceMenuComponent, HeaderComponent],
-  imports: [
-    CommonModule,
-    RouterModule
-  ]
+    declarations: [
+        MainLayoutComponent,
+        FooterComponent,
+        HeaderComponent,
+        MenuComponent,
+        ApartmentDropdownComponent,
+        RoomDropdownComponent,
+        ThingDropdownComponent,
+        ItemDropdownComponent
+
+    ],
+
+    imports: [
+        CommonModule,
+        RouterModule,
+        FormsModule,
+        AngularFontAwesomeModule
+    ],
+
 })
 export class LayoutModule { }

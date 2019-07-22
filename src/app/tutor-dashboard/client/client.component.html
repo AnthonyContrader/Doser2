@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 style="text-align: center">Client Registration</h4>
+        </div>
+    </div>
+    <div clas="row">
+        <form>
+            <div class="col-sm-6">
+                <div class="form-group">
+	                <label for="Name">Name</label> 
+	                <input id="Name" class="form-control" type="text" name="name" [(ngModel)]="clientDTO.name" >
+                </div>
+                
+                <div class="form-group">
+	                <label for="Surname">Surname</label> 
+	                <input id="Surname" class="form-control" type="text" name="surname" [(ngModel)]="clientDTO.surname" >
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="form-group">
+	                <label for="Birthdate">Birthdate</label> 
+	                <input id="Birthdate" class="form-control" type="date" name="birthdate" [(ngModel)]="clientDTO.birthdate">
+                </div>
+
+                <div class="form-group">
+	                <label for="Telnumber">Telephone Number</label> 
+	                <input id="Telnumber" class="form-control" type="text" name="telnumber" [(ngModel)]="clientDTO.telnumber" >
+                </div>
+                <div class="form-group">
+                    <label for="Apartment">Apartment</label> 
+	                <select  class="form-control" id= "Apartment" name="apartment" [(ngModel)]="clientDTO.apartment">
+	                    <option *ngFor="let apartment of apartments" [ngValue]="apartment">{{apartment.address}}</option>   
+                    </select>
+                </div>
+
+            </div>
+            
+	        <button class="btn btn-primary" type="submit" (click)="register()">Register</button>
+        </form>
+    </div>
+</div>

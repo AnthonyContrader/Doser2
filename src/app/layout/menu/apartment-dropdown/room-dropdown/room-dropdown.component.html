@@ -1,0 +1,18 @@
+<div *ngFor="let room of rooms" >
+        <button class="menubtn" type="button" (click)="collapse(); select(room)" data-toggle="collapsebtn" data-target="#room">
+           <i class="fas fa-angle-right" *ngIf="!isCollapsed || selectedroom!==room " style="padding-right:5px"></i>
+        <i class="fas fa-angle-down" *ngIf="isCollapsed && selectedroom===room" style="padding-right:5px"></i>
+        {{room.description}}
+        <a [routerLink]="['/tutor-dashboard/room', room.id]">
+        <i class="fas fa-eye" style="float: right"></i>
+        </a>
+        </button>
+        <div class="collapsebtn" id="room" *ngIf="isCollapsed">
+            <div>
+                <app-thing-dropdown *ngIf="selectedroom===room" [room]="selectedroom"></app-thing-dropdown>
+            </div>
+        </div>
+
+</div>
+
+

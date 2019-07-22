@@ -1,39 +1,40 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginModule } from './login/login.module';
-import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from './layout/layout.module';
-import { AdminModule } from './admin/admin.module';
-import { TutorModule } from './tutor/tutor.module';
-import { DoctorModule } from './doctor/doctor.module';
-import { DeviceModule } from './device/device.module';
-import { RegistrationModule } from './registration/registration.module';
+import { TutorDashboardModule } from './tutor-dashboard/tutor-dashboard.module';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginModule } from './login/login.module';
+import { FormsModule } from '@angular/forms';
+import { TestuserDashboardComponent } from './testuser-dashboard/testuser-dashboard.component';
+import { SuperuserDashboardComponent } from './superuser-dashboard/superuser-dashboard.component';
+import { UserDetailsComponent } from './superuser-dashboard/user-details/user-details.component';
+import { Notification1Component } from './superuser-dashboard/notification1/notification1.component';
+import { UsernotpaymentComponent } from './superuser-dashboard/usernotpayment/usernotpayment.component';
 
 
-/** 
- * Modulo principale dell'applicazione. Qui vengono importati i moduli secondari. L'UNICA component
- * da dichiare qui è l'AppComponent, tutte le altre devono essere dichiarate nel loro modulo e questo importato
- * qui.
- * 
- * @author Vittorio Valent
-*/
+
 @NgModule({
   declarations: [
     AppComponent,
+    TestuserDashboardComponent,
+    SuperuserDashboardComponent,
+    UserDetailsComponent,
+    Notification1Component,
+    UsernotpaymentComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LoginModule,
-    RegistrationModule,
     HttpClientModule,
+    FormsModule,
+
+    LoginModule,
     LayoutModule,
-    AdminModule,
-    TutorModule,
-    DoctorModule,
-    DeviceModule
+    TutorDashboardModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

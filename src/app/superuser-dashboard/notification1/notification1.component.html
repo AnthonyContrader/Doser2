@@ -1,0 +1,11 @@
+
+        <div *ngFor="let user of users">
+            <div *ngIf="!user.paymentStatus">
+                <h1 style=" color:blue; text-align:center">  
+                        <a [routerLink] = "['/usernotpayment',user.id]"> {{user.name}} is not paying!</a> 
+                </h1>
+            </div>
+        </div>     
+   
+
+  

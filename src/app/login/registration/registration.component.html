@@ -1,0 +1,63 @@
+
+<div class="container">
+    <div clas="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+	                <label for="Username">Username</label> 
+	                <input class ="form-control" id="Username" type="text" name="username" [(ngModel)]="userDTO.username">
+                </div>
+
+                <div class="form-group">
+                    <label for="Password">Password</label> 
+	                <input class ="form-control" id="Password" type="text" name="password" [(ngModel)]="userDTO.password">
+                </div>
+    
+                <div class="form-group">
+	                <label for="Email">E-mail</label> 
+	                <input class="form-control" id="Email" type="text" name="email" [(ngModel)]="userDTO.email">
+                </div>
+    
+                <div class="form-group">
+	                <label for="Name">Name</label> 
+	                <input id="Name" class="form-control" type="text" name="name" [(ngModel)]="userDTO.name" >
+                </div>
+                
+                <div class="form-group">
+	                <label for="Surname">Surname</label> 
+	                <input id="Surname" class="form-control" type="text" name="surname" [(ngModel)]="userDTO.surname" >
+                </div>
+                
+                <div class="form-group">
+	                <label for="Birthdate">Birthdate</label> 
+	                <input id="Birthdate" class="form-control" type="date" name="birthdate" [(ngModel)]="userDTO.birthdate">
+                </div>
+
+                <div class="form-group">
+	                <label for="Address">Address</label> 
+                    <input id="Address" class="form-control" type="text" name="address" [(ngModel)]="userDTO.address" >
+                </div>
+
+                <div class="form-group">
+	                <label for="Telnumber">Telephone Number</label> 
+	                <input id="Telnumber" class="form-control" type="text" name="telnumber" [(ngModel)]="userDTO.telnumber" >
+                </div>
+                
+                <div class="form-group">
+	                <label for="ccc">Credit Card</label> 
+	                <input id="ccc" class="form-control" type="text" name="ccc" [(ngModel)]="userDTO.ccc" >
+                </div>
+
+                <div class="form-group">
+                    <label for="UserType">UserType</label> 
+	                <select  class="form-control" id= "UserType" name="usertype" [(ngModel)]="userDTO.userType">
+	                    <option value="OPERATOR">Operator</option>
+	                    <option value="TUTOR">Tutor</option>
+                    </select>
+                </div>
+                
+	            <button class="btn btn-primary" type="submit" (click)="register()">Register</button>
+            </form>
+        </div>
+    </div>
+</div>

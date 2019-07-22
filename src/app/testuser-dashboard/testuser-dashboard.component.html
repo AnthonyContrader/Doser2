@@ -1,0 +1,7 @@
+
+     <li *ngFor="let dto of dtolist">
+   
+      <span>{{dto.id}}</span> {{dto.description}} <button type="submit" (click)="setfalse(dto)">OFF</button>    
+      <button type="submit" (click)="settrue(dto)">ON</button>
+
+  </li>

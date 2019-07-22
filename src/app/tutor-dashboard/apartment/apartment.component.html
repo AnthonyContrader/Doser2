@@ -1,0 +1,45 @@
+<div *ngIf="apartment">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mt-4">
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img class="card-img" src="../../assets/ImmagineStan.png" alt="Card image cap">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body mt-4">
+                                <h5 class="card-title"><input style="width: 10rem" [(ngModel)]= "apartment.address"/></h5>
+                                <button type="submit" class="btn btn-primary" (click)="update()">Save</button>
+                                <button type="submit" class="btn btn-primary" (click)="delete(apartment.id)">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mt-4" *ngFor="let room of rooms">
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img class="card-img" src="../../assets/ImmagineStan.png" alt="Card image cap">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><a [routerLink]="['/tutor-dashboard/room',room.id]">{{room.description}}</a></h5>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <h6>Insert a new room:</h6> 
+        <input [(ngModel)]="room.description"/>
+        <button type="submit" class="btn btn-primary" (click)="insert()">Insert</button>
+    </div>
+</div>
+
+

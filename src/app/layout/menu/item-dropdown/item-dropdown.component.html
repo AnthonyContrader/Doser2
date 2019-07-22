@@ -1,0 +1,7 @@
+<div *ngFor="let item of items">
+    <button class="menubtn" type="button" (click)="select(item); details()">
+        <i *ngIf="item.type === 'attuatore'" class="fas fa-lightbulb" style="padding: 10px" ></i> 
+         <i *ngIf="item.type === 'sensore'" class="fas fa-thermometer-half" style="padding: 10px" ></i>
+          {{item.description}} 
+    </button>
+</div>

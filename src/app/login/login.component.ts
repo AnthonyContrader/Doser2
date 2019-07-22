@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginDTO } from 'src/dto/logindto';
+
 import { NgForm } from '@angular/forms';
-import { UserService } from 'src/service/user.service';
+
 import { Router } from '@angular/router';
-import { UserDTO } from 'src/dto/userdto';
+
 import { NgForOf } from '@angular/common';
+import { LoginDTO } from '../dto/logindto';
+import { UserService } from '../services/user.service';
+import { UserDTO } from '../dto/userdto';
 
 
 @Component({
@@ -34,25 +37,20 @@ export class LoginComponent implements OnInit {
         console.log(user.authorities);
 
         switch (user.authorities.toString()) {
-          case 'ROLE_ADMIN': {
-            this.router.navigate(['/admin-dashboard']);
+          case 'ROLE_SUPERUSER': {
+            this.router.navigate(['/superuser-dashboard']);
             break;
           }
           case 'ROLE_TUTOR': {
             this.router.navigate(['/tutor-dashboard']);
             break;
           }
-          case 'ROLE_DOCTOR': {
-            this.router.navigate(['/doctor-dashboard']);
+          case 'ROLE_OPERATOR': {
+            this.router.navigate(['/operator-dashboard']);
             break;
           }
-          case 'ROLE_DEVICE': {
-            this.router.navigate(['/device-dashboard']);
-            break;
-          }
-          
-          case 'ROLE_USER': {
-            this.router.navigate(['/work-in-progress']);
+          case 'ROLE_TESTUSER': {
+            this.router.navigate(['/testuser-dashboard']);
             break;
           }
 
@@ -72,3 +70,4 @@ export class LoginComponent implements OnInit {
     }
     
 }
+

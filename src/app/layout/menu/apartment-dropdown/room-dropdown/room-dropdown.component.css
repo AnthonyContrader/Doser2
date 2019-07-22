@@ -1,0 +1,30 @@
+
+
+.menubtn{
+    width: 100%;
+    text-align: left;
+    background-color: #40565e;
+    color: #f1f1f1;
+    border: none;
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+ button:hover {
+    color: #27d8ca;
+}
+.menubtn:focus {
+    color: #27d8ca;
+}
+
+
+ a:hover {
+    background-color: #27d8ca;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}

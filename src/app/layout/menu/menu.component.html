@@ -1,0 +1,67 @@
+
+
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="sidenav">
+
+                <button class="menubtn">
+                    <a [routerLink]="['/tutor-dashboard']" > <i class="fas fa-home" style="margin-right: 10px"> </i> Dashboard </a> 
+                </button>
+                
+                 <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#account" (click)="accountcollapse()">
+                    <i class="fas fa-user"  style="margin-right: 15px"></i> Account
+                </button>
+                <div class="collapsebtn" id="account" *ngIf="isAccountCollapsed">
+                     <button  class="menubtn" style="background-color: #334247; padding-left: 40px" >
+                       <a [routerLink]="['/tutor-dashboard/wip', 1]" > <i class="fas fa-user-edit"  style="margin-right: 15px"></i> Edit Profile</a> 
+                    </button>
+                    <button  class="menubtn" style="background-color: #334247; padding-left: 40px">
+                      
+                            <a [routerLink]="['/tutor-dashboard/contract-conditions']" ><i class="fas fa-file-alt"  style="margin-right: 15px"></i>Contract Conditions</a> 
+                
+                    </button>
+
+                </div>
+
+                <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#apartment" (click)="collapse()">
+                    <i class="fas fa-building" style="margin-right: 15px"></i>Apartments
+                </button>
+                
+                <div class="collapsebtn" id="apartment" *ngIf="isCollapsed">
+                    <button class="menubtn">
+                    <a [routerLink]="['/tutor-dashboard/wip', 1]" > <i class="fas fa-edit" style="margin-right: 10px"> </i> Manage Apartments </a> 
+                    </button>
+                    <app-apartment-dropdown></app-apartment-dropdown>
+                </div>
+
+                <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#client" (click)="clientcollapse()">
+                    <i class="fas fa-users"  style="margin-right: 15px"></i> Clients
+                </button>
+                    <button  class="menubtn" id="client" *ngIf="isClientCollapsed" style="background-color: #334247; padding-left: 40px">
+                        <a [routerLink]="['/tutor-dashboard/wip', 1]" ><i class="fas fa-user-cog"  style="margin-right: 15px"></i> Manage Clients</a>
+                    </button>
+                    <button  class="menubtn" id="client" *ngIf="isClientCollapsed" style="background-color: #334247; padding-left: 40px">
+                         <a [routerLink]="['/tutor-dashboard/register-client']" ><i class="fas fa-user-plus"  style="margin-right: 15px"></i> Add a new CLient</a>
+                    </button>
+
+                    <button  class="menubtn">
+                         <a [routerLink]="['/tutor-dashboard/event-report']" ><i class="fas fa-chart-line"  style="margin-right: 15px"></i> Events </a>
+                    </button>
+
+                <button type="button" class="menubtn">
+                     <a [routerLink]="['/tutor-dashboard/wip', 1]" ><i class="fas fa-user-md" style="margin-right: 15px"></i> Operators</a>
+                </button>
+
+                <button type="button" class="menubtn">
+                    <a [routerLink]="['/tutor-dashboard/wip', 1]" ><i class="fas fa-calendar-alt" style="margin-right: 15px"></i> Appointments</a>
+                </button>
+
+                  <button  class="menubtn" (click)="logout()">
+                       <i class="fas fa-sign-out-alt" style="margin-right: 15px"></i>Logout
+                </button>
+ 
+            </div>
+        </div>
+    </div>
+</body>

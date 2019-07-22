@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SampleAngular": {
+    "DoserAngular": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,21 +13,25 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/SampleAngular",
+            "outputPath": "dist/DoserAngular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
+              "src/DoserLogo.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+             "node_modules/bootstrap/dist/css/bootstrap.min.css",
+             "node_modules/font-awesome/css/font-awesome.min.css",
+              "src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+                "node_modules/bootstrap/dist/js/bootstrap.min.js",
+                "node_modules/jquery/dist/jquery.min.js"
+
+
             ],
             "es5BrowserSupport": true
           },
@@ -61,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "SampleAngular:build"
+            "browserTarget": "DoserAngular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "SampleAngular:build:production"
+              "browserTarget": "DoserAngular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SampleAngular:build"
+            "browserTarget": "DoserAngular:build"
           }
         },
         "test": {
@@ -106,7 +110,7 @@
         }
       }
     },
-    "SampleAngular-e2e": {
+    "DoserAngular-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +119,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "SampleAngular:serve"
+            "devServerTarget": "DoserAngular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "SampleAngular:serve:production"
+              "devServerTarget": "DoserAngular:serve:production"
             }
           }
         },
@@ -135,5 +139,5 @@
       }
     }
   },
-  "defaultProject": "SampleAngular"
+  "defaultProject": "DoserAngular"
 }

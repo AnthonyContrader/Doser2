@@ -1,0 +1,61 @@
+<div class="container" id="dashboard">
+    <h3 style="text-align: center; padding-top: 10px">Dashboard</h3>
+    <div class="row mt-2">
+        <div class="col-md-4">
+            <div *ngFor="let client of clientlist">
+                <div class="card">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="img-square-wrapper">
+                                    <br>
+                                    <img class="" src="../../assets/clientfoto.svg" alt="Card image cap">
+                                </div>
+                                <p style="font-size: 12px; text-align: right">{{client.name}} {{client.surname}}</p>
+                            </div>
+                            <div class="col-md-4">
+                                <br>
+                                <br>
+                                <p><i class="fas fa-heartbeat" style="font-size: 48px; color: red"></i> <br>70 BPM</p>
+                            </div>
+                            <div class="col-md-4">
+                                <br>
+                                <br>
+                                <p><i class="fas fa-balance-scale" style="font-size: 48px; color: black"></i> <br>82 Kg
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div *ngFor="let apartment of apartmentlist">
+                <a [routerLink]="['/tutor-dashboard/apartment', apartment.id]">
+                    <div class="card" style="width:100%; display: inline-block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="img-square-wrapper">
+                                        <img class="" src="../../assets/home2.svg" alt="Card image cap">
+                                    </div>
+
+                                    <p>{{apartment.address}}</p>
+
+                                    <app-notifications></app-notifications>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <br>
+                                    <br>
+                                    <p><i class="fas fa-thermometer-half" style="font-size: 48px; color: lightblue"></i>
+                                        <br>37</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

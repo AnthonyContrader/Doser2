@@ -1,0 +1,17 @@
+#dashboard{
+    background-color: #e5eef3;
+    height: 100%;
+}
+
+p{
+    text-align: center;
+}
+
+.card{
+    margin:10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

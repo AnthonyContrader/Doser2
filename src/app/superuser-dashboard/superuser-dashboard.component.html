@@ -1,0 +1,55 @@
+
+<body background="../../assets/img1.jpg">
+    
+    <div class= "container">
+        <div class= "row">
+            <div class= "col-md-6">
+                <div class = "card" style="margin-top: 20%" >
+                    <div class= "card-body">
+                    <h3>
+                       Tutors
+                    </h3>
+                        <ul *ngFor="let tutor of tutors">
+                        <li>
+                            <a [routerLink]="['/user-details',tutor.id]">
+                                {{tutor.name}}, {{tutor.surname}}
+                            </a>
+                            payment status: {{tutor.paymentStatus}}
+                
+                            <button type="submit" class="btn btn-primary" (click)="delete(tutor.id)">Delete</button>
+
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+             </div>
+         
+     
+        
+            <div class = "col-md-6">
+                <div class = "card" style="margin-top: 20%"  >
+                    <div class= "card-body">
+                        <h3>
+                            Operators
+                        </h3>
+                            <ul *ngFor="let tutor of operators">
+                         <li>
+                            <a [routerLink]="['/user-details',tutor.id]">
+                                {{tutor.name}}, {{tutor.surname}}
+                            </a>
+                            payment status: {{tutor.paymentStatus}}
+                
+                            <button type="submit" class="btn btn-primary" (click)="delete(tutor.id)">Delete</button>
+                        </li>
+           
+                         </ul>
+                    </div>
+                </div>
+               
+            </div>
+            <div class= "col-md-12">
+            <app-notification1></app-notification1>
+        </div>
+        </div>
+    </div>
+ </body>
