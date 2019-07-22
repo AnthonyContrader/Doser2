@@ -1,0 +1,35 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "it.contrader"
+        },
+        "jhipsterVersion": "5.8.2",
+        "applicationType": "gateway",
+        "baseName": "gateway",
+        "packageName": "it.contrader",
+        "packageFolder": "it/contrader",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "hazelcast",
+        "enableHibernateCache": true,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "h2Disk",
+        "prodDatabaseType": "mysql",
+        "searchEngine": false,
+        "messageBroker": false,
+        "serviceDiscoveryType": "consul",
+        "buildTool": "maven",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "N2QzZWM1YmQ3ZmU5NWZmODE0MTU2OTcwNTM5YjQ5OGM5OTVhNTJlYjg1MmI3MDBlZmQxYTc0M2UxYjU2YmIzNWJmNTI5NjczNjNlMzA2ZGQ3NGY5OGNmYmZjMWUzNTAzMjkwMTBjNWI4ZGMxMmRlNTIzOTcyNjFhNDFjYTJlMGE=",
+        "clientFramework": "angularX",
+        "useSass": true,
+        "clientPackageManager": "npm",
+        "testFrameworks": [],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [],
+        "enableTranslation": false
+    }
+}
