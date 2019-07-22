@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-1">
+    </div>
+    <h1 style="text-align: center"> Registration</h1>
+    <div class="coll_1">
+      <table>
+        <tr>
+          <th>
+            Username
+          </th>
+          <th>
+            Password
+          </th>
+          <th>
+            Email
+          </th>
+          <th>
+            Usertype
+          </th>
+          <th>
+            Edit
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <input placeholder="login" [(ngModel)]="passtoinsert.login">
+          </td>
+          <td>
+            <input placeholder="password" [(ngModel)]="passtoinsert.password">
+          </td>
+          <td>
+            <input placeholder="email" [(ngModel)]="passtoinsert.email">
+          </td>
+          <td>
+            <select multiple="multiple" placeholder="authorities" [(ngModel)]="passtoinsert.authorities">
+              <option value="ROLE_ADMIN">ROLE_ADMIN</option>
+              <option value="ROLE_TUTOR">ROLE_TUTOR</option>
+              <option value="ROLE_DOCTOR">ROLE_DOCTOR</option>
+              <option value="ROLE_DEVICE">ROLE_DEVICE</option>
+            </select>
+          </td>
+          <td>
+            <button (click)="register(passtoinsert)">Register</button>
+          </td>
+          <td>
+            <button (click)="clear()">Clear</button>
+          </td>
+        </tr>
+        <tr *ngFor="let registration of registrations">
+          <td>
+            <input [(ngModel)]="registration.login">
+          </td>
+          <td>
+            <input [(ngModel)] = "registation.password">
+          </td>
+          <td>
+            <input [(ngModel)]="registration.email">
+          </td>
+          <td>
+            <input [(ngModel)] = "registration.authorities">
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>
